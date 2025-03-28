@@ -5,13 +5,7 @@ pacman::p_load(tidyverse, psych, readxl, VIM, car, nortest, rstatix, ggpubr, gpl
                corrplot)
 
 # Cargar datos
-df <- read_csv2("Encuesta_cultura.csv")
-
-# Seleccionar variables
-data <- df[,c(1,6,8,9,12,13,17,307,308)]
-
-# Filtrar por region
-data <- data %>% filter(Region==8) # Región 8 es la región del Biobío
+data <- read_csv2("Encuesta_culturas.csv")
 
 # Observar estructura de los datos
 glimpse(data) # En Sexo 1 es hombre y 2 es mujer; Edad y Esc (años de escolaridad)
